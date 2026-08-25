@@ -35,6 +35,7 @@
       coverageWhatsapp: "Quero confirmar se vocês atendem meu endereço",
       moradorWhatsapp: "Sou morador local e quero contratar a internet",
       veranistaWhatsapp: "Sou veranista e quero contratar a internet (pagamento de 6 meses adiantados no cartão)",
+      planosWhatsapp: "Quero saber o valor do plano para o meu endereço",
       floatWhatsapp: "Quero saber mais sobre a internet Gigabom"
     };
     Object.keys(ids).forEach(function (id) {
@@ -77,14 +78,19 @@
     if (e.key === "Escape") closeCityModal();
   });
 
-  /* ---------- Signup tabs ---------- */
-  var tabButtons = document.querySelectorAll(".tab-btn");
-  tabButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      tabButtons.forEach(function (b) { b.setAttribute("aria-selected", "false"); });
-      document.querySelectorAll(".tab-panel").forEach(function (p) { p.classList.remove("active"); });
-      btn.setAttribute("aria-selected", "true");
-      document.getElementById(btn.dataset.target).classList.add("active");
+  /* ---------- Tabs (signup + plan zones), scoped per tablist ---------- */
+  document.querySelectorAll('[role="tablist"]').forEach(function (tablist) {
+    var buttons = tablist.querySelectorAll(".tab-btn");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        buttons.forEach(function (b) {
+          b.setAttribute("aria-selected", "false");
+          var panel = document.getElementById(b.dataset.target);
+          if (panel) panel.classList.remove("active");
+        });
+        btn.setAttribute("aria-selected", "true");
+        document.getElementById(btn.dataset.target).classList.add("active");
+      });
     });
   });
 
