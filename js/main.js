@@ -22,25 +22,15 @@
   });
 
   /* ---------- WhatsApp link personalization ---------- */
-  function waLink(extra) {
-    var city = localStorage.getItem(CITY_KEY);
-    var msg = "Olá! Vim pelo site da Gigabom";
-    if (city) msg += " e moro/tenho casa em " + city;
-    msg += (extra ? ". " + extra : ".");
+  function waLink() {
+    var msg = "Olá, vim através do site da Gigabom e quero confirmar se vocês atendem minha região";
     return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
   }
   function refreshWhatsappLinks() {
-    var ids = {
-      heroWhatsapp: "Quero saber mais sobre os planos de internet",
-      coverageWhatsapp: "Quero confirmar se vocês atendem meu endereço",
-      moradorWhatsapp: "Sou morador local e quero contratar a internet",
-      veranistaWhatsapp: "Sou veranista e quero contratar a internet (pagamento de 6 meses adiantados no cartão)",
-      planosWhatsapp: "Quero saber o valor do plano para o meu endereço",
-      floatWhatsapp: "Quero saber mais sobre a internet Gigabom"
-    };
-    Object.keys(ids).forEach(function (id) {
+    var ids = ["heroWhatsapp", "coverageWhatsapp", "moradorWhatsapp", "veranistaWhatsapp", "planosWhatsapp", "floatWhatsapp"];
+    ids.forEach(function (id) {
       var el = document.getElementById(id);
-      if (el) el.href = waLink(ids[id]);
+      if (el) el.href = waLink();
     });
   }
   refreshWhatsappLinks();

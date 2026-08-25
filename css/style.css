@@ -250,6 +250,10 @@ section{padding:76px 0}
   padding:14px 18px;border-radius:10px;font-size:.92rem;margin:16px 0;color:var(--purple-900)
 }
 .tab-panel .signup-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;justify-content:center}
+@media (max-width:560px){
+  .tab-panel .signup-actions{flex-direction:column}
+  .tab-panel .signup-actions .btn{width:100%}
+}
 .mini-list{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:8px;font-size:.92rem}
 .mini-list li{display:flex;gap:8px}
 .mini-list svg{width:18px;height:18px;color:var(--green-600);flex:none;margin-top:2px}
