@@ -107,6 +107,9 @@ section{padding:76px 0}
   .nav-toggle{display:inline-flex}
   .header-actions .btn-primary-desktop{display:none}
 }
+@media (min-width:901px){
+  .main-nav .nav-assinante{display:none}
+}
 
 /* ===== Hero ===== */
 .hero{
