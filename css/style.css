@@ -93,7 +93,7 @@ section{padding:76px 0}
 .main-nav{display:flex;align-items:center}
 .main-nav-actions{display:none}
 .main-nav-links{display:flex;align-items:center;gap:28px}
-.main-nav a{font-weight:700;font-size:.95rem;text-decoration:none;color:var(--ink);position:relative;padding:4px 0}
+.main-nav a{font-weight:700;font-size:.95rem;text-decoration:none;color:var(--ink);position:relative;padding:4px 0;white-space:nowrap}
 .main-nav a:hover{color:var(--purple)}
 .header-actions{display:flex;align-items:center;gap:12px}
 .city-pill{
@@ -163,6 +163,10 @@ section{padding:76px 0}
   .hero p.lead{margin-inline:auto}
   .hero-ctas,.hero-badges{justify-content:center}
   .hero-media{order:-1}
+}
+@media (max-width:640px){
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn{width:100%}
 }
 
 /* ===== Trust strip ===== */
@@ -270,6 +274,10 @@ section{padding:76px 0}
 }
 .tab-btn svg{width:18px;height:18px}
 .tab-btn[aria-selected="true"]{background:var(--green);border-color:var(--green);color:var(--purple-900)}
+@media (max-width:640px){
+  .tabs{flex-direction:column;align-items:stretch}
+  .tab-btn{justify-content:center;width:100%}
+}
 .tab-panels{max-width:760px;margin:0 auto}
 .tab-panel{display:none;background:#fff;color:var(--ink);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
 .tab-panel.active{display:block}
