@@ -9,16 +9,22 @@
 
   /* ---------- Mobile nav ---------- */
   var navToggle = document.getElementById("navToggle");
+  var navClose = document.getElementById("navClose");
   var mainNav = document.getElementById("mainNav");
+  function closeNav() {
+    mainNav.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
   navToggle.addEventListener("click", function () {
     var open = mainNav.classList.toggle("open");
     navToggle.setAttribute("aria-expanded", open ? "true" : "false");
   });
+  navClose.addEventListener("click", closeNav);
   mainNav.querySelectorAll("a").forEach(function (a) {
-    a.addEventListener("click", function () {
-      mainNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
+    a.addEventListener("click", closeNav);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeNav();
   });
 
   /* ---------- WhatsApp link personalization ---------- */
