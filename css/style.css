@@ -122,8 +122,8 @@ section{padding:76px 0}
 .hero-badges{display:flex;flex-wrap:wrap;gap:22px;margin-top:36px}
 .hero-badge{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.88rem;color:var(--purple-900)}
 .hero-badge svg{width:26px;height:26px;color:var(--green-600);flex:none}
-.hero-media{position:relative;display:flex;justify-content:center}
-.hero-media img{width:min(420px,90%);filter:drop-shadow(0 24px 30px rgba(57,49,133,.28))}
+.hero-media{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-media img{width:min(420px,90%);height:auto;filter:drop-shadow(0 24px 30px rgba(57,49,133,.28))}
 .hero-media .glow{
   position:absolute;inset:auto auto 0 50%;transform:translateX(-50%);
   width:70%;height:40px;background:radial-gradient(closest-side, rgba(57,49,133,.25), transparent 70%);
