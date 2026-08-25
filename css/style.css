@@ -148,15 +148,15 @@ section{padding:76px 0}
 .hero-badge{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.88rem;color:var(--purple-900)}
 .hero-badge svg{width:26px;height:26px;color:var(--green-600);flex:none}
 .hero-media{position:relative;display:flex;justify-content:center;align-items:center}
-.hero-media img{width:min(420px,90%);height:auto;filter:drop-shadow(0 24px 30px rgba(57,49,133,.28))}
-.hero-media .glow{
-  position:absolute;inset:auto auto -2% 50%;transform:translateX(-50%);
+.hero-media img{width:min(420px,90%);height:auto;display:block;filter:drop-shadow(0 24px 30px rgba(57,49,133,.28))}
+.mascote-float{position:relative;display:block;animation:mascote-float 4.5s ease-in-out infinite}
+.mascote-float .glow{
+  position:absolute;inset:auto auto -2% 49%;transform:translateX(-50%);
   width:32%;height:22px;background:radial-gradient(closest-side, rgba(176,203,31,.75), transparent 75%);
   filter:blur(6px);
   animation:mascote-shadow 4.5s ease-in-out infinite;
   pointer-events:none;
 }
-.mascote-float{display:block;animation:mascote-float 4.5s ease-in-out infinite}
 @keyframes mascote-float{
   0%,100%{transform:translateY(0) rotate(-2deg)}
   50%{transform:translateY(-16px) rotate(2deg)}
