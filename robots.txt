@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gigabominternet.com.br/sitemap.xml
+Sitemap: https://gigabom.com.br/sitemap.xml
