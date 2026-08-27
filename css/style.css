@@ -211,6 +211,19 @@ section{padding:76px 0}
 }
 .map-wrap iframe{display:block}
 
+.coverage-map-wrap{max-width:900px;margin:34px auto 0;position:relative}
+.coverage-map{
+  height:380px;border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-sm);border:2px solid var(--lavender-2);background:var(--lavender);
+}
+.coverage-map .leaflet-container{font-family:var(--ff)}
+.coverage-map-legend{
+  display:flex;gap:18px;justify-content:center;margin-top:14px;flex-wrap:wrap;
+}
+.coverage-map-legend span{display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;color:var(--purple-900)}
+.coverage-map-legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.coverage-map-note{margin-top:14px}
+
 /* ===== Plans ===== */
 .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media (max-width:900px){.plans-grid{grid-template-columns:1fr;max-width:420px;margin-inline:auto}}

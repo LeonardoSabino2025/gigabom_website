@@ -33,7 +33,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
 
 <link rel="preload" as="image" href="assets/img/mascote-3d.webp" fetchpriority="high">
-<link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/style.css?v=13">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 
 <script type="application/ld+json">
 {
@@ -182,6 +183,15 @@
       </article>
     </div>
     <p class="coverage-note">Não achou sua rua na lista? A rede está sempre expandindo. <a id="coverageWhatsapp" href="https://wa.me/558431902330" target="_blank" rel="noopener">Confirme sua disponibilidade no WhatsApp</a> e a gente confere pra você na hora.</p>
+
+    <div class="coverage-map-wrap" data-reveal>
+      <div id="coverageMap" class="coverage-map" role="img" aria-label="Mapa ilustrativo das áreas atendidas pela rede Gigabom"></div>
+      <div class="coverage-map-legend">
+        <span><i style="background:#393185"></i>Extremoz</span>
+        <span><i style="background:#7CB342"></i>Ceará-Mirim</span>
+      </div>
+    </div>
+    <p class="coverage-note coverage-map-note">Mapa ilustrativo das regiões atendidas — as áreas são aproximadas de propósito, sem marcar pontos exatos da rede. Maxaranguape também é atendida, mas ainda não está mapeada aqui. <a href="https://wa.me/558431902330" target="_blank" rel="noopener">Confirme seu endereço específico pelo WhatsApp</a>.</p>
   </div>
 </section>
 
@@ -485,6 +495,8 @@
   </div>
 </div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
 <script src="js/main.js?v=4" defer></script>
+<script src="js/coverage-map.js?v=1" defer></script>
 </body>
 </html>
