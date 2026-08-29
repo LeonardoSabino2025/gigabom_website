@@ -2,8 +2,15 @@
 body{background:radial-gradient(1200px 600px at 80% -10%, var(--lavender) 0%, transparent 60%), #fff}
 .site-header .container{justify-content:center}
 
-.err404{min-height:calc(100vh - 78px - 70px);display:flex;align-items:center;padding:40px 0}
-.err404-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.err404{position:relative;min-height:calc(100vh - 78px - 70px);display:flex;align-items:center;padding:40px 0;overflow:hidden}
+.err404-inner{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+
+.err404-bg-number{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-size:clamp(12rem,38vw,30rem);font-weight:800;line-height:1;
+  color:var(--purple);opacity:.06;white-space:nowrap;
+  pointer-events:none;z-index:0;user-select:none;
+}
 
 .err404-media{position:relative;display:flex;justify-content:center;align-items:center;min-height:420px}
 
@@ -47,12 +54,7 @@ body{background:radial-gradient(1200px 600px at 80% -10%, var(--lavender) 0%, tr
 }
 
 .err404-copy{text-align:left}
-.err404-code{
-  font-size:clamp(4rem,10vw,7rem);font-weight:800;line-height:1;
-  color:var(--purple);background:linear-gradient(180deg,transparent 60%, var(--green) 60%);
-  display:inline-block;margin:0 0 .1em;
-}
-.err404-copy h1{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--purple-900);margin-bottom:.4em}
+.err404-copy h1{font-size:clamp(1.6rem,3.2vw,2.3rem);color:var(--purple-900);margin-bottom:.4em}
 .err404-copy .lead{color:var(--gray);max-width:48ch}
 .err404-ctas{margin-top:24px}
 
